@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipo Sistema - Bosquejos</title>
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<header>
+  <h1>Prototipo Sistema</h1>
+</header>
+
+<nav id="menu" class="hidden">
+  <button onclick="mostrarPantalla('dashboard')">Dashboard</button>
+  <button onclick="mostrarPantalla('turnos')">Gestión de Turnos</button>
+  <button onclick="mostrarPantalla('mascotas')">Registro Mascotas</button>
+  <button onclick="logout()">Cerrar sesión</button>
+</nav>
+
+<div id="intro-modal">
+  <div class="intro-box">
+  <h2>MascotaFeliz — Sistema de Gestión Veterinaria</h2> <p> MascotaFeliz es un sistema web diseñado a partir del relevamiento y análisis de necesidades de una clínica veterinaria, con el objetivo de mejorar la organización de turnos y el seguimiento clínico de las mascotas mediante un registro digital centralizado. </p> <p> Durante el análisis se detectaron problemáticas como la ausencia de historial médico digital, falta de asignación de profesionales y gestión manual de turnos, lo que generaba demoras y pérdida de información. </p> <h3>Rol</h3> <p> Analista de Sistemas (Proyecto académico aplicado). Participación en la definición de requerimientos funcionales, diseño de artefactos de análisis y desarrollo de un prototipo navegable para validar los flujos principales del sistema. </p> <h3>Tecnologías y herramientas</h3> <p> HTML · CSS · JavaScript · UML · Análisis de Requisitos </p> <p> El siguiente prototipo representa una validación visual del sistema. Permite iniciar sesión, registrar mascotas y gestionar turnos. No incluye backend ni persistencia de datos, ya que fue desarrollado para validar funcionalidades durante la etapa de análisis. </p>
+  <button onclick="cerrarIntro()">Continuar</button>
+  </div>
+</div>
+
+<main>
+  
+  
+
+  <!-- LOGIN -->
+  
+
+  <section id="login">
+    <h2>Login</h2>
+    <label for="usuario">Usuario</label>
+    <input type="text" id="usuario" placeholder="Ingrese su usuario" />
+    <label for="password">Contraseña</label>
+    <input type="password" id="password" placeholder="Ingrese su contraseña" />
+    <button class="primary" onclick="login()">Ingresar</button>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section id="dashboard" class="hidden">
+    <h2>Dashboard</h2>
+    <p>Bienvenido al sistema. Aquí verá un resumen de actividades.</p>
+    <ul>
+      <li>Próximos turnos: 3</li>
+      <li>Alertas: 1</li>
+      <li>Estadísticas básicas disponibles</li>
+    </ul>
+  </section>
+
+  <!-- GESTIÓN DE TURNOS -->
+  <section id="turnos" class="hidden">
+    <h2>Gestión de Turnos</h2>
+    <button class="primary" onclick="mostrarNuevoTurno()">Nuevo Turno</button>
+
+    <div id="nuevo-turno-form" class="hidden">
+      <label for="fecha-turno">Fecha</label>
+      <input type="date" id="fecha-turno" />
+      <label for="hora-turno">Hora</label>
+      <input type="time" id="hora-turno" />
+      <label for="motivo-turno">Motivo</label>
+      <input type="text" id="motivo-turno" placeholder="Ej: Consulta general" />
+      <button class="primary" onclick="agregarTurno()">Guardar Turno</button>
+      <button onclick="ocultarNuevoTurno()">Cancelar</button>
+    </div>
+
+    <div class="turno-list" id="lista-turnos">
+      <div class="turno-item">2024-06-20 10:00 - Consulta general</div>
+      <div class="turno-item">2024-06-21 15:30 - Vacunación</div>
+      <div class="turno-item">2024-06-22 09:00 - Control de peso</div>
+    </div>
+  </section>
+
+  <!-- REGISTRO DE MASCOTAS -->
+  <section id="mascotas" class="hidden">
+    <h2>Registro de Mascotas</h2>
+    <label for="nombre-mascota">Nombre</label>
+    <input type="text" id="nombre-mascota" placeholder="Ej: Firulais" />
+    <label for="tipo-mascota">Tipo</label>
+    <select id="tipo-mascota">
+      <option value="">Seleccione</option>
+      <option value="perro">Perro</option>
+      <option value="gato">Gato</option>
+      <option value="otro">Otro</option>
+    </select>
+    <label for="raza-mascota">Raza</label>
+    <input type="text" id="raza-mascota" placeholder="Ej: Labrador" />
+    <label for="edad-mascota">Edad (años)</label>
+    <input type="number" id="edad-mascota" min="0" max="30" />
+    <label for="dueno-mascota">Dueño</label>
+    <input type="text" id="dueno-mascota" placeholder="Nombre del dueño" />
+    <button class="primary" onclick="guardarMascota()">Guardar Mascota</button>
+  </section>
+
+  
+
+</main>
+
+<script src="script.js"></script>
+<script>
+function cerrarIntro() {
+  document.getElementById("intro-modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
