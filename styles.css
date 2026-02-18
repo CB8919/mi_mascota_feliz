@@ -136,14 +136,8 @@ button.primary:hover {
     margin: 20px auto;
   }
 
-/*Tablets */
-@media (max-width: 768px) {
 
-  .intro-box img {
-    width: 100px;
-  }
 
-}
 
 
 
