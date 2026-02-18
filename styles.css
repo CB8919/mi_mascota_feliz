@@ -126,12 +126,15 @@ button.primary:hover {
 /*Celulares */
 @media (max-width: 480px) {
 
-  .intro-box img {
-    width: 80px;     /* más chica en móvil */
-    margin-bottom: 10px;
+  #intro-modal {
+    align-items: flex-start;   
+    overflow-y: auto;          
+    padding: 20px 10px;        
   }
 
-}
+  .intro-box {
+    margin: 20px auto;
+  }
 
 /*Tablets */
 @media (max-width: 768px) {
@@ -141,6 +144,7 @@ button.primary:hover {
   }
 
 }
+
 
 
 
