@@ -123,18 +123,25 @@ button.primary:hover {
   padding: 8px 0;
 }
 
-/*Celulares */
+/* Celulares */
 @media (max-width: 480px) {
 
   #intro-modal {
-    align-items: flex-start;   
-    overflow-y: auto;          
-    padding: 20px 10px;        
+    position: fixed;
+    inset: 0;
+
+    display: block;     /* ⚠️ sacamos flex */
+    overflow-y: auto;   /* scroll real */
+    padding: 20px 10px;
   }
 
   .intro-box {
     margin: 20px auto;
   }
+
+}
+
+
 
 
 
