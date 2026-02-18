@@ -136,10 +136,12 @@ button.primary:hover {
   }
 
   .intro-box {
-    margin: 10px auto 30px;  /* 👈 sube la caja */
+    margin: 0 auto;
+    transform: translateY(-10px);
   }
 
 }
+
 
 
 
