@@ -123,6 +123,27 @@ button.primary:hover {
   padding: 8px 0;
 }
 
+/*Celulares */
+@media (max-width: 480px) {
+
+  .intro-box img {
+    width: 80px;     /* más chica en móvil */
+    margin-bottom: 10px;
+  }
+
+}
+
+/*Tablets */
+@media (max-width: 768px) {
+
+  .intro-box img {
+    width: 100px;
+  }
+
+}
+
+
+
 
 
 
