@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0; padding: 0; background: #f5f5f5;
+  overflow-x: hidden;
 }
 header {
   background: #005f99; color: white; padding: 10px 20px;
@@ -140,6 +141,7 @@ button.primary:hover {
   }
 
 }
+
 
 
 
